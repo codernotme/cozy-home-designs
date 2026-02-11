@@ -95,7 +95,7 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium">Address</p>
-                      <p className="text-muted-foreground">Kanpur, Uttar Pradesh, India</p>
+                      <p className="text-muted-foreground">Aaraji no.76, Mardanpur, Kanpur, Uttar Pradesh - 209305</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -108,8 +108,9 @@ const Contact = () => {
                   <div className="flex items-start gap-3">
                     <Phone className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium">Phone</p>
-                      <a href="tel:+919999999999" className="text-muted-foreground hover:text-foreground">+91 99999 99999</a>
+                      <p className="font-medium">Phones</p>
+                      <a href="tel:+919793122554" className="block text-muted-foreground hover:text-foreground">+91 97931 22554</a>
+                      <a href="tel:+919935597561" className="block text-muted-foreground hover:text-foreground">+91 99355 97561</a>
                     </div>
                   </div>
                 </div>

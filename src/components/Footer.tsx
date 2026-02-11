@@ -11,7 +11,7 @@ const Footer = () => (
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
             Premium furniture & commercial kitchen equipment manufacturer based in Kanpur, serving businesses across India.
           </p>
-          <p className="text-primary-foreground/50 text-xs mt-3">GSTIN: 09XXXXX1234X1ZX</p>
+          <p className="text-primary-foreground/50 text-xs mt-3">GSTIN: 09ABTPS2319E1ZC</p>
         </div>
 
         {/* Quick Links */}
@@ -48,10 +48,13 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider">Contact Us</h4>
           <div className="flex flex-col gap-3 text-sm text-primary-foreground/70">
-            <span className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0" /> Kanpur, Uttar Pradesh, India</span>
+            <span className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0" /> Aaraji no.76, Mardanpur, Kanpur - 209305</span>
             <a href="mailto:Newcoolsindia@gmail.com" className="flex items-center gap-2 hover:text-primary-foreground"><Mail className="h-4 w-4 shrink-0" /> Newcoolsindia@gmail.com</a>
-            <a href="tel:+919999999999" className="flex items-center gap-2 hover:text-primary-foreground"><Phone className="h-4 w-4 shrink-0" /> +91 99999 99999</a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground"><MessageCircle className="h-4 w-4 shrink-0" /> WhatsApp</a>
+            <div className="flex flex-col gap-1">
+              <a href="tel:+919793122554" className="flex items-center gap-2 hover:text-primary-foreground"><Phone className="h-4 w-4 shrink-0" /> +91 97931 22554</a>
+              <a href="tel:+919935597561" className="flex items-center gap-2 hover:text-primary-foreground"><Phone className="h-4 w-4 shrink-0" /> +91 99355 97561</a>
+            </div>
+            <a href="https://wa.me/919793122554" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground"><MessageCircle className="h-4 w-4 shrink-0" /> WhatsApp</a>
           </div>
         </div>
       </div>
