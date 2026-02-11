@@ -1,7 +1,9 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Award, Users, Factory, Shield } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import factoryImg from "@/assets/factory_interior_v3_1770805491014.png";
 
 const highlights = [
   { icon: Factory, title: "Modern Manufacturing", desc: "State-of-the-art facility in Kanpur with advanced machinery and skilled craftsmen." },
@@ -12,6 +14,11 @@ const highlights = [
 
 const About = () => (
   <Layout>
+    <SEO
+      title="About Us"
+      description="Learn about NC's history, our state-of-the-art manufacturing facility in Kanpur, and our commitment to quality craftsmanship."
+      image={factoryImg}
+    />
     {/* Page header */}
     <section className="bg-secondary/40 py-16">
       <div className="container mx-auto px-4">
@@ -26,12 +33,17 @@ const About = () => (
 
     {/* Story */}
     <section className="py-16">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-6">Our Story</h2>
-        <div className="prose text-muted-foreground space-y-4 text-sm leading-relaxed">
-          <p>NC is a Kanpur-based manufacturer specializing in two distinct but complementary domains — elegant home and office furniture, and robust commercial kitchen & bakery equipment.</p>
-          <p>Founded with a vision to deliver quality craftsmanship at competitive prices, we have grown to serve a diverse clientele including hotels, restaurants, institutional canteens, bakeries, and individual homeowners across India.</p>
-          <p>Our manufacturing facility combines traditional craftsmanship with modern technology, ensuring every product meets the highest standards of durability, functionality, and aesthetics.</p>
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="prose text-muted-foreground space-y-4 text-sm leading-relaxed">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">Our Story</h2>
+            <p>NC is a Kanpur-based manufacturer specializing in two distinct but complementary domains — elegant home and office furniture, and robust commercial kitchen & bakery equipment.</p>
+            <p>Founded with a vision to deliver quality craftsmanship at competitive prices, we have grown to serve a diverse clientele including hotels, restaurants, institutional canteens, bakeries, and individual homeowners across India.</p>
+            <p>Our manufacturing facility combines traditional craftsmanship with modern technology, ensuring every product meets the highest standards of durability, functionality, and aesthetics.</p>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <img src={factoryImg} alt="NC Manufacturing Facility" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
     </section>

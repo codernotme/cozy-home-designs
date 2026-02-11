@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X, Phone, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -15,7 +16,18 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/products?search=${encodeURIComponent(searchQuery)}`);
+      setMobileOpen(false);
+      setSearchQuery("");
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
@@ -43,6 +55,16 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
+          <form onSubmit={handleSearch} className="relative hidden lg:block">
+             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+             <Input
+               type="search"
+               placeholder="Search..."
+               className="w-48 pl-9 h-9"
+               value={searchQuery}
+               onChange={(e) => setSearchQuery(e.target.value)}
+             />
+          </form>
           <Button variant="outline" size="sm" asChild>
             <a href="tel:+919999999999"><Phone className="mr-1 h-3 w-3" /> Call Us</a>
           </Button>
@@ -67,6 +89,16 @@ const Header = () => {
             className="md:hidden overflow-hidden border-t border-border bg-background"
           >
             <nav className="flex flex-col p-4 gap-1">
+              <form onSubmit={handleSearch} className="mb-4 relative">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="search"
+                  placeholder="Search products..."
+                  className="w-full pl-9"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </form>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}

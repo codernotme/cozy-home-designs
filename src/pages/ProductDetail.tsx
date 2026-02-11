@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +25,11 @@ const ProductDetail = () => {
 
   return (
     <Layout>
+      <SEO
+        title={product.name}
+        description={product.description}
+        image={product.image}
+      />
       <div className="container mx-auto px-4 py-10">
         <Button variant="ghost" size="sm" className="mb-6" asChild>
           <Link to="/products"><ArrowLeft className="mr-1 h-4 w-4" /> Back to Products</Link>

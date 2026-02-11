@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ProductCard from "@/components/ProductCard";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { products, testimonials } from "@/data/products";
 import heroBanner from "@/assets/hero-banner.jpg";
 
@@ -18,6 +19,11 @@ const categoryIcons = [
 
 const Index = () => (
   <Layout>
+    <SEO
+      title="Home"
+      description="NC - Premium furniture & commercial kitchen equipment manufacturer based in Kanpur. Explore our range of sofas, dining tables, and industrial kitchen machinery."
+      image={heroBanner}
+    />
     {/* Hero */}
     <section className="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -125,7 +131,7 @@ const Index = () => (
           <Button size="lg" variant="secondary" asChild>
             <Link to="/contact">Request a Quote</Link>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+          <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary hover:bg-primary-foreground/10" asChild>
             <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
             </a>

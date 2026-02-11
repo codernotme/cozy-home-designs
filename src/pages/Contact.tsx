@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,6 +25,10 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with NC for quotes, inquiries, or support. We are located in Kanpur and serve clients across India."
+      />
       <section className="bg-secondary/40 py-16">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

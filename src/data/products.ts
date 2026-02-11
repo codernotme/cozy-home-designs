@@ -1,3 +1,14 @@
+import sofaImg from "@/assets/milano_leather_sofa_1770805284776.png";
+import tableImg from "@/assets/oslo_dining_table_v2_1770805408825.png";
+import coffeeTableImg from "@/assets/zen_coffee_table_v2_1770805456578.png";
+import chapatiImg from "@/assets/chapati_making_machine_v2_1770805372237.png";
+import steamImg from "@/assets/steam_cooking_plant_v2_1770805389458.png";
+import rangeImg from "@/assets/commercial_gas_range_v2_1770805439160.png";
+import ovenImg from "@/assets/deck_oven_bakery_1770805306158.png";
+import mixerImg from "@/assets/spiral_dough_mixer_1770805322055.png";
+import slicerImg from "@/assets/bread_slicer_machine_1770805338083.png";
+import placeholderImg from "../assets/placeholder.svg";
+
 export interface Product {
   id: string;
   name: string;
@@ -20,7 +31,7 @@ export const products: Product[] = [
     description: "Premium Italian-inspired leather sofa with solid wood frame and high-density foam cushioning for ultimate comfort.",
     features: ["Genuine leather upholstery", "Solid teak wood frame", "High-density foam", "5-year warranty"],
     specifications: { "Dimensions": "220 × 90 × 85 cm", "Material": "Genuine Leather", "Frame": "Teak Wood", "Seating": "3-Seater", "Color": "Tan Brown" },
-    image: "/placeholder.svg",
+    image: sofaImg,
     featured: true,
   },
   {
@@ -31,7 +42,7 @@ export const products: Product[] = [
     description: "Scandinavian-inspired solid wood dining table with clean lines and natural finish.",
     features: ["Solid sheesham wood", "Seats 6 comfortably", "Scratch-resistant finish", "Easy assembly"],
     specifications: { "Dimensions": "180 × 90 × 76 cm", "Material": "Sheesham Wood", "Finish": "Natural Matte", "Seating Capacity": "6", "Weight": "45 kg" },
-    image: "/placeholder.svg",
+    image: tableImg,
     featured: true,
   },
   {
@@ -42,7 +53,7 @@ export const products: Product[] = [
     description: "Classic accent chair with modern fabric upholstery and ergonomic design.",
     features: ["Ergonomic design", "Premium fabric", "Sturdy metal legs", "360° swivel"],
     specifications: { "Dimensions": "70 × 65 × 90 cm", "Material": "Fabric & Metal", "Color": "Charcoal Grey", "Max Weight": "120 kg" },
-    image: "/placeholder.svg",
+    image: placeholderImg,
   },
   {
     id: "f4",
@@ -52,7 +63,7 @@ export const products: Product[] = [
     description: "Contemporary arc floor lamp with adjustable height and warm LED lighting.",
     features: ["Adjustable height", "LED compatible", "Marble base", "Warm tone shade"],
     specifications: { "Height": "150–180 cm", "Base": "Marble", "Shade": "Linen", "Bulb Type": "E27 LED" },
-    image: "/placeholder.svg",
+    image: placeholderImg,
   },
   {
     id: "f5",
@@ -62,7 +73,7 @@ export const products: Product[] = [
     description: "Minimalist coffee table with tempered glass top and walnut wood legs.",
     features: ["Tempered glass top", "Walnut legs", "Minimalist design", "Easy to clean"],
     specifications: { "Dimensions": "120 × 60 × 45 cm", "Top": "Tempered Glass", "Legs": "Walnut Wood", "Weight": "18 kg" },
-    image: "/placeholder.svg",
+    image: coffeeTableImg,
     featured: true,
   },
   // Kitchen Equipment
@@ -74,7 +85,7 @@ export const products: Product[] = [
     description: "Fully automatic chapati making machine for commercial kitchens. Produces up to 1000 chapatis per hour with consistent quality.",
     features: ["Fully automatic operation", "1000 chapatis/hour", "Adjustable thickness", "Stainless steel body"],
     specifications: { "Capacity": "1000 pcs/hour", "Power": "3 HP Motor", "Material": "SS 304", "Dimensions": "150 × 60 × 120 cm", "Weight": "250 kg" },
-    image: "/placeholder.svg",
+    image: chapatiImg,
     featured: true,
   },
   {
@@ -85,7 +96,7 @@ export const products: Product[] = [
     description: "Industrial steam cooking plant for large-scale meal preparation. Ideal for hospitals, hostels, and canteens.",
     features: ["Large capacity", "Energy efficient", "Easy maintenance", "Food-grade steel"],
     specifications: { "Capacity": "500 meals/batch", "Steam Pressure": "2 kg/cm²", "Material": "SS 316", "Fuel": "LPG / PNG", "Warranty": "2 Years" },
-    image: "/placeholder.svg",
+    image: steamImg,
     featured: true,
   },
   {
@@ -96,7 +107,7 @@ export const products: Product[] = [
     description: "Semi-automatic roti making machine perfect for medium-scale commercial kitchens.",
     features: ["Semi-automatic", "500 rotis/hour", "Compact design", "Easy to operate"],
     specifications: { "Capacity": "500 pcs/hour", "Power": "1.5 HP", "Material": "SS 304", "Dimensions": "90 × 50 × 100 cm" },
-    image: "/placeholder.svg",
+    image: chapatiImg,
   },
   {
     id: "k4",
@@ -106,7 +117,7 @@ export const products: Product[] = [
     description: "Heavy-duty commercial gas range with 4 burners and oven for professional kitchens.",
     features: ["4 high-power burners", "Built-in oven", "Stainless steel construction", "Adjustable flames"],
     specifications: { "Burners": "4", "Material": "SS 304", "Fuel": "LPG / PNG", "Dimensions": "120 × 80 × 90 cm" },
-    image: "/placeholder.svg",
+    image: rangeImg,
   },
   // Bakery Equipment
   {
@@ -117,7 +128,7 @@ export const products: Product[] = [
     description: "Professional deck oven with 3 trays and steam injection for artisan bread and pastries.",
     features: ["Steam injection", "Digital temperature control", "Stone baking surface", "Energy efficient"],
     specifications: { "Trays": "3", "Temperature": "50–350°C", "Power": "9 kW", "Material": "SS 304", "Dimensions": "120 × 100 × 160 cm" },
-    image: "/placeholder.svg",
+    image: ovenImg,
     featured: true,
   },
   {
@@ -125,10 +136,10 @@ export const products: Product[] = [
     name: "Spiral Dough Mixer",
     category: "bakery",
     subcategory: "Mixers",
-    description: "Heavy-duty spiral dough mixer for commercial bakeries. Ideal for bread, pizza, and pastry dough.",
+    description: "Heavy-duty commercial spiral dough mixer for commercial bakeries. Ideal for bread, pizza, and pastry dough.",
     features: ["Spiral mixing action", "Timer control", "Safety guard", "Bowl scraper"],
     specifications: { "Capacity": "50 kg dough", "Speed": "2-speed", "Power": "3 HP", "Material": "SS & Cast Iron" },
-    image: "/placeholder.svg",
+    image: mixerImg,
   },
   {
     id: "b3",
@@ -138,7 +149,7 @@ export const products: Product[] = [
     description: "Automatic bread slicing machine for uniform slices at high speed.",
     features: ["Adjustable slice thickness", "High speed", "Safety features", "Easy cleaning"],
     specifications: { "Capacity": "400 loaves/hour", "Slice Thickness": "8–25 mm", "Power": "0.5 HP", "Material": "SS 304" },
-    image: "/placeholder.svg",
+    image: slicerImg,
   },
 ];
 

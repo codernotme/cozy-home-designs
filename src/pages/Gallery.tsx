@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { products, categories } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,10 @@ const Gallery = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Product Gallery"
+        description="Visual showcase of our products including luxury furniture, commercial kitchen setups, and bakery equipment."
+      />
       <section className="bg-secondary/40 py-16">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

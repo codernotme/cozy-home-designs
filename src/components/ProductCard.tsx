@@ -11,14 +11,15 @@ const categoryColors: Record<string, string> = {
 };
 
 const ProductCard = ({ product }: { product: Product }) => (
-  <Card className="group overflow-hidden hover:shadow-md transition-shadow">
-    <div className="aspect-[4/3] bg-muted overflow-hidden">
+  <Card className="group overflow-hidden hover:shadow-xl hover:border-accent/50 transition-all duration-300">
+    <div className="aspect-[4/3] bg-muted overflow-hidden relative">
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
         loading="lazy"
       />
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
     </div>
     <CardContent className="p-4">
       <Badge variant="secondary" className={`mb-2 text-xs ${categoryColors[product.category]}`}>
